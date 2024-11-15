@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function Header() {
     return(
         <div className="flex justify-center items-center bg-[url('./src/assets/worldmap.png')] bg-center h-48 w-full">
