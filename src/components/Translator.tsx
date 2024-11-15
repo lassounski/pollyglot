@@ -19,6 +19,7 @@ export default function Header() {
 
     function startOver(): void {
         setTranslation('')
+        setOriginalText('')
     }
 
     return (
