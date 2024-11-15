@@ -1,50 +1,19 @@
-# React + TypeScript + Vite
+# PollyGlot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Simple AI powered app that translates messages to other languages.
+Built in React with Tailwind CSS.
+Uses OpenAI to translate the messages.
 
-Currently, two official plugins are available:
+## Add your OpenAI API Key
+1. Go to https://platform.openai.com/ and register your account
+2. Get your API key from Settings > Organization | API Keys (might have to create one)
+3. Add your API key like this `VITE_OPENAI_API_KEY=your_key_here` in a file called `.env.local` at the root directory
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Run locally
 ```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+$ pnpm install
+$ pnpm dev
 ```
+Open the browser on the specified port.
+
